@@ -14,7 +14,9 @@ html, body, app-root, .site ,mat-sidenav-container{
 main{
     flex:1;
 }
-
+.full-width{
+    width: 100%;
+}
 .fill-remaining-space{
     flex: 1 1 auto;
 }

@@ -1,9 +1,12 @@
+import { loadSvgResource } from './../utils/svg.util';
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { DomSanitizer } from '@angular/platform-browser';
+import { SharedModule } from '../shared/shared.module';
+import { MatIconRegistry } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -12,8 +15,8 @@ import { CommonModule } from '@angular/common';
     SidebarComponent
     ],
   imports: [
-    CommonModule,
-    MatToolbarModule
+    HttpClientModule,
+    SharedModule
   ],
   exports: [
     HeaderComponent,
@@ -22,9 +25,12 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parent: CoreModule) {
+  constructor(@Optional() @SkipSelf() parent: CoreModule,
+  ir: MatIconRegistry, ds: DomSanitizer
+   ) {
     if (parent) {
       throw new Error('Module already exit');
     }
+    loadSvgResource(ir, ds);
   }
 }
