@@ -1,3 +1,4 @@
+import { ProjectListComponent } from './project/project-list/project-list.component';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,8 @@ import { LoginModule } from './login/login.module';
     MatSidenavModule,
     BrowserAnimationsModule,
     CoreModule,
-    LoginModule
+    LoginModule,
+    ProjectListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

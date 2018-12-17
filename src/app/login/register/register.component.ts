@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  items:any[]=[];
+  items:any[] = [];
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
     this.getItems();
   }
   getItems(){
-    for (let i = 0; i < 15; i++) {
+    for (let i = 1; i < 15; i++) {
       this.items.push(`item${i}`);
       
     }
