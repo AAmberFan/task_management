@@ -9,7 +9,14 @@ export class ProjectListComponent implements OnInit {
 
   projects = [
     {
-      "name":
+      'name': 'project1',
+      'desc': 'this is the first project',
+      'coverImg': 'assets/img/cover/0.jpg'
+    },
+    {
+      'name': 'project2',
+      'desc': 'this is the second project',
+      'coverImg': 'assets/img/cover/1.jpg'
     }
   ];
   constructor() { }
