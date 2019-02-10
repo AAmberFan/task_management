@@ -9,11 +9,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginModule } from './login/login.module';
+import { TaskHomeComponent } from './task/task-home/task-home.component';
+import { TaskListComponent } from './task/task-list/task-list.component';
+import { TaskItemComponent } from './task/task-item/task-item.component';
+import { TaskHeaderComponent } from './task/task-header/task-header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskHomeComponent,
+    TaskListComponent,
+    TaskItemComponent,
+    TaskHeaderComponent
   ],
   imports: [
     BrowserModule,
