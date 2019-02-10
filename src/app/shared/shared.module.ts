@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
+import {
   MatToolbarModule,
    MatIconModule,
    MatButtonModule,
@@ -10,7 +10,8 @@ import {
      MatListModule,
      MatSlideToggleModule,
      MatGridListModule,
-     MatDialogModule
+     MatDialogModule,
+     MatAutocompleteModule
     } from '@angular/material';
 
 @NgModule({
@@ -27,7 +28,8 @@ import {
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   exports: [
     CommonModule,
@@ -40,7 +42,8 @@ import {
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ]
 })
 export class SharedModule { }

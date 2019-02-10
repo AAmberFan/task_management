@@ -1,3 +1,4 @@
+import { InviteComponent } from './../invite/invite.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
@@ -34,5 +35,9 @@ export class ProjectListComponent implements OnInit {
   openNewProjectDialog(){
     const dialogRef = this.dialog.open(NewProjectComponent,  {data: {dark: true}});
     dialogRef.afterClosed().subscribe(result => console.log(result));
+  }
+
+  lauchInviteDialog(){
+    const dialogRef = this.dialog.open(InviteComponent);
   }
 }
