@@ -1,12 +1,13 @@
 <form>
-  <h2 mat-dialog-title>{{title}}</h2>
+  <h2 mat-dialog-title>Move all the tasks of the list</h2>
   <div mat-dialog-content>
+
     <mat-form-field class="full-width">
-      <input matInput type="text" placeholder="Project Name" />
+      <mat-select placeholder="Choose the destination list">
+        <mat-option *ngFor="let list of lists">{{list.name}}</mat-option>
+      </mat-select>
     </mat-form-field>
-    <mat-form-field class="full-width">
-      <input matInput type="text" placeholder="Project Descrbition" />
-    </mat-form-field>
+
   </div>
   <div mat-dialog-actions>
     <button type="button" mat-raised-button color="primary" (click)="onClick()">Save</button>

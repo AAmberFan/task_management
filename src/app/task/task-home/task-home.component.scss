@@ -13,3 +13,11 @@
   flex-wrap: wrap;
   overflow-x: scroll;
 }
+
+.list-container{
+  flex:0 0 360px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+

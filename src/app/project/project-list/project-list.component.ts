@@ -32,12 +32,16 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
   }
 
-  openNewProjectDialog(){
-    const dialogRef = this.dialog.open(NewProjectComponent,  {data: {dark: true}});
+  openNewProjectDialog() {
+    const dialogRef = this.dialog.open(NewProjectComponent,  {data: {title: 'Add A New Project'}});
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
-  lauchInviteDialog(){
+  lauchInviteDialog() {
     const dialogRef = this.dialog.open(InviteComponent);
+  }
+
+  launchUpdateDialog() {
+    const dialogRef = this.dialog.open(NewProjectComponent,  {data: {title: 'Edit the Project'}});
   }
 }
