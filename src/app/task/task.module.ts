@@ -9,6 +9,7 @@ import { MatButtonModule, MatIconModule, MatMenuModule ,MatListModule, MatCheckb
 import { NewTaskComponent } from './new-task/new-task.component';
 import { SharedModule } from '../shared/shared.module';
 import { CopyTaskComponent } from './copy-task/copy-task.component';
+import { NewTaskListComponent } from './new-task-list/new-task-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CopyTaskComponent } from './copy-task/copy-task.component';
     TaskHeaderComponent,
     TaskListComponent,
     NewTaskComponent,
-    CopyTaskComponent
+    CopyTaskComponent,
+    NewTaskListComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { CopyTaskComponent } from './copy-task/copy-task.component';
    ],
    entryComponents:[
      NewTaskComponent,
-     CopyTaskComponent
+     CopyTaskComponent,
+     NewTaskListComponent
    ],
   exports: [],
   providers: [],

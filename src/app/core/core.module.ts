@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SharedModule } from '../shared/shared.module';
 import { MatIconRegistry } from '@angular/material';
-
+import 'hammerjs';
 @NgModule({
   declarations: [
     HeaderComponent,

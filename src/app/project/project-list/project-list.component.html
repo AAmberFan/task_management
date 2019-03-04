@@ -3,7 +3,8 @@
 [item]="project"
 class="card"
 (onInvite)="lauchInviteDialog()"
-(onEdit)="launchUpdateDialog()">
+(onEdit)="launchUpdateDialog()"
+(onDel)="launchConfirmDialog()">
 </app-project-item>
 
 <button class="fab-button" mat-fab type="button" (click)="openNewProjectDialog()">
