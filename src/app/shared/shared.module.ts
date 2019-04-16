@@ -1,3 +1,4 @@
+import { DirectiveModule } from './../directive/directive.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -18,8 +19,10 @@ import {
      MatDatepickerModule,
      MatNativeDateModule,
      MatSelectModule,
+     MatSidenavModule,
     } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ConfirmDialogComponent],
@@ -31,7 +34,6 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
-    MatButtonModule,
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
@@ -39,6 +41,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatAutocompleteModule,
     MatDatepickerModule,
     MatSelectModule,
+    MatSidenavModule,
+    DirectiveModule,
   ],
   exports: [
     CommonModule,
@@ -61,7 +65,11 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule,
+    DirectiveModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   entryComponents:[
     ConfirmDialogComponent

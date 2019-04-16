@@ -1,15 +1,18 @@
 import { ConfirmDialogComponent } from './../../shared/confirm-dialog/confirm-dialog.component';
 import { InviteComponent } from './../invite/invite.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
+import { slideToRight } from 'src/app/animation/router.admin';
 
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectListComponent implements OnInit {
+
   projects = [
     {
       name: 'project1',
@@ -27,13 +30,14 @@ export class ProjectListComponent implements OnInit {
       coverImg: 'assets/img/cover/2.jpg',
     },
   ];
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef) {}
 
   ngOnInit() {}
 
   openNewProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent, { data: { title: 'Add A New Project' } });
     dialogRef.afterClosed().subscribe(result => console.log(result));
+    this.cd.markForCheck();
   }
 
   lauchInviteDialog() {
@@ -49,5 +53,6 @@ export class ProjectListComponent implements OnInit {
       data: { title: 'Delete the project', content: 'Confirm to delete the project?' },
     });
     dialogRef.afterClosed().subscribe(result => console.log(result));
+    this.cd.markForCheck();
   }
 }

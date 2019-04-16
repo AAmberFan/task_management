@@ -8,6 +8,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { SharedModule } from '../shared/shared.module';
 import { MatIconRegistry } from '@angular/material';
 import 'hammerjs';
+import { take } from 'rxjs/operators';
+import { AppRoutingModule } from '../app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServicesModule } from '../services/services.module';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -16,12 +21,22 @@ import 'hammerjs';
     ],
   imports: [
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ServicesModule.forRoot()
+
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    SharedModule
+  ],
+  providers:[
+    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
   ]
 })
 export class CoreModule {

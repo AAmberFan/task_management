@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import {
   MatSidenavModule
 } from '@angular/material';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginModule } from './login/login.module';
 import { TaskModule } from './task/task.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,13 +18,11 @@ import { TaskModule } from './task/task.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatSidenavModule,
-    BrowserAnimationsModule,
     CoreModule,
     LoginModule,
     ProjectModule,
     TaskModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

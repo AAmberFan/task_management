@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent {
   darkTheme = false;
   squareState: string;
 
-  constructor(private oc: OverlayContainer){
+  constructor(private oc: OverlayContainer, @Inject('BASE_CONFIG') config){
 
   }
 
