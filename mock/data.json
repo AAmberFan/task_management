@@ -1,0 +1,19 @@
+{
+  "quotes":[
+    {
+      "id":0,
+      "word":"love me and love my dog",
+      "pic":"/src/assets/img/quote/1.jpg"
+    },
+    {
+      "id":1,
+      "word":"love me and love my cat",
+      "pic":"/src/assets/img/quote/2.jpg"
+    },
+    {
+      "id":2,
+      "word":"love me and love my ferrets",
+      "pic":"/src/assets/img/quote/3.jpg"
+    }
+  ]
+}
