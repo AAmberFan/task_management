@@ -12,6 +12,7 @@ import { take } from 'rxjs/operators';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesModule } from '../services/services.module';
+import 'util/debug.util';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { ServicesModule } from '../services/services.module';
     SharedModule
   ],
   providers:[
-    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
+    {provide: 'BASE_CONFIG', useValue:{
+      uri:  'http://localhost:3000'
+    }}
   ]
 })
 export class CoreModule {

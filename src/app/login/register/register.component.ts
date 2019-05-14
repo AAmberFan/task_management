@@ -30,4 +30,8 @@ export class RegisterComponent implements OnInit {
     }
     console.log(this.items);
   }
+
+  onSubmit({value, valid}, ev){
+
+  }
 }

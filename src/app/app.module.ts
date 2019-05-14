@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ProjectModule } from './project/project.module';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,7 @@ import { SharedModule } from './shared/shared.module';
     ProjectModule,
     TaskModule,
     CoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,10 +25,10 @@
       Every Memo
     </mat-card-title>
     <mat-card-subtitle>
-      see cat a day, making the day happy
+      {{quote.word}}
     </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="../../../assets/img/quote/fatcatthumb.jpg" alt="cat">
+  <img mat-card-image [src]="quote.pic" alt="quote img">
   <mat-card-content>
     happy!
   </mat-card-content>
